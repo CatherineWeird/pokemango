@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet"> 
+
+	    <title> Pokemango </title>
+	    <style type="text/css">
+
+
+
+
+
+	    #content{
+
+	    	margin-left: auto;
+	    	margin-right: auto;
+
+	    	width:50%;
+
+	    	font-family: 'Permanent Marker', cursive;
+	    }
+
+	    img { 
+        
+            width:auto ;
+            max-width: 100% ;
+            height: auto ;
+
+
+	     }
+
+
+
+	    .mangoinitial{
+
+	        width: 300px;
+	    	height: 300px;
+
+
+	    }
+
+
+	    .mangoshake1{
+	    	width: 300px;
+	    	height: 300px;
+
+
+	    	animation-name: shake1;
+	    	animation-duration: 1s;
+	    	animation-iteration-count: 2;
+
+
+
+	
+	    }
+	    .mangoshake2{
+	    	width: 300px;
+	    	height: 300px;
+
+	    	animation-name: shake2;
+	    	animation-duration: 1s;
+	    	animation-iteration-count: 2;
+
+	    	transform: rotate(0deg);
+
+
+
+	    }
+
+
+	    @keyframes shake1 {
+
+	    	from {
+
+	    		transform: rotate(0deg);
+
+	    	}
+
+
+	    	10% {
+
+	    		transform: rotate(0deg);
+	    		transform: translateX(10px);
+
+
+	    	}
+
+	    	20% {
+
+	    		transform: rotate(10deg);
+	    		transform: translateX(-10px);
+
+
+	    	}
+
+	    	30% {
+
+
+	    		transform: rotate(0deg);
+	    		transform: translateX(10px);
+
+
+
+	    	}
+
+
+
+
+	
+
+
+
+	    	to {
+
+	    		transform: rotate(0deg);
+
+
+	    	}
+	    }
+
+
+
+
+	    @keyframes shake2 {
+
+	    	from {
+
+	    		transform: rotate(0deg);
+
+	    	}
+
+	    	10% {
+
+	    		transform: rotate(30deg);
+	    	}
+
+	        20% {
+
+	    		transform: rotate(10deg);
+	    	}
+
+	        50% {
+
+	    		transform: rotate(30deg);
+	    	}	
+
+
+	        70% {
+
+	    		transform: rotate(-10deg);
+	    	}
+
+
+	    	to {
+
+	    		transform: rotate(0deg);
+
+
+	    	}
+	    }
+	    	
+	    </style>
+
+	    <script type="text/javascript">
+
+	    var image, horn1, horn2;
+
+	    function shakeMango(){
+
+	    	image = document.getElementById("mango");
+	    	horn1 = document.getElementById("horn1");
+	    	horn2 = document.getElementById("horn2");
+
+
+	    	if (image.className==="mangoshake1"){
+
+
+                horn1.play();
+	    		image.className="mangoshake2";
+	    		
+
+	    	}
+	    	else{
+	    		horn2.play();
+	    		image.className="mangoshake1";
+	    	}
+	    	
+
+	    }
+
+
+	    	
+	    </script>
+	 </head>
+	 <body>
+
+	     <audio preload:auto id="horn1">
+	     	
+	     	<source src="sounds/horn1_final.ogg"  type="audio/ogg">
+	     	<source src="sounds/horn1_final.mp3"  type="audio/mp3">
+	     </audio>
+
+
+	     <audio preload:auto id="horn2">
+
+
+	     	<source src="sounds/horn2_final.ogg" type="audio/ogg">
+	     	<source src="sounds/horn2_final.mp3" type="audio/mp3">
+	     </audio>
+        <div id="content">
+	     <img src="images/English_Pokemon_logo.svg.jpg">
+
+	
+
+	     <img src="images/mango1_final.png" class="mangoinitial" id="mango" onclick="shakeMango()">
+
+        <p>Poke the Mango, go on poke it </p>
+
+
+
+	                 <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hashtag/pokemango" data-widget-id="754100515596865537">#pokemango Tweets</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          
+	    </div>
+	 	
+
+	 </body>
+</html>
+
